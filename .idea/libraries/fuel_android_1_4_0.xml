@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="fuel-android-1.4.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.kittinunf.fuel/fuel-android/1.4.0/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.kittinunf.fuel/fuel-android/1.4.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.kittinunf.fuel/fuel-android/1.4.0/f4fdf24144027e4e59876cc24f6e219736f0a5a9/fuel-android-1.4.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -24,5 +24,46 @@
         android:layout_below="@id/textView"
         android:text="Ticket lösen"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/getTicketButton"
+
+        />
+
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:orientation="vertical"
+        android:id="@+id/gotTicketPanel"
+        android:layout_below="@id/getTicketButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ticketInfoLabel"
+            android:text="hadsflkj"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bezahlen und ausfahren"
+            android:id="@+id/payAndGo"
+            android:onClick="payAndGo"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@id/gotTicketPanel"
+        android:visibility="invisible"
+        android:id="@+id/readyToGo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Schranke ist geöffnet"/>
+    </LinearLayout>
+
 </RelativeLayout>
