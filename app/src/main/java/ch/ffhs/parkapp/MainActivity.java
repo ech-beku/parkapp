@@ -145,10 +145,39 @@ public class MainActivity extends AppCompatActivity implements OnSignalChangedLi
         });
     }
 
-    public void payAndGo(View view){
+    public void payAndGo(View view) {
+
+        // https://parking-rest-server.herokuapp.com/api/pay_ticket?token=43525
+pay();
+
+    }
+    private void pay() {
+
+        Fuel.get("http://parking-rest-server.herokuapp.com/api/pay_ticket?token=" + String.valueOf(token), null).responseString(new Handler<String>() {
+            @Override
+            public void failure(Request request, Response response, FuelError error) {
+                //do something when it is failure
+                Log.d("error", error.toString());
+            }
+
+            @Override
+            public void success(Request request, Response response, String data) {
+                //do something when it is successful
+
+                try {
+                    JSONObject answer = new JSONObject(data);
 
 
+                    openSchranke();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
+            }
+        });
+    }
+
+    private void openSchranke(){
         Fuel.get("http://parking-rest-server.herokuapp.com/api/open_gate?eTicketNumber=" + String.valueOf(eTicketNumber) + "&token=" + String.valueOf(token), null).responseString(new Handler<String>() {
             @Override
             public void failure(Request request, Response response, FuelError error) {
